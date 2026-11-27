@@ -1,0 +1,295 @@
+# =============================================================
+# .gitignore
+# =============================================================
+
+# -------------------------------------------------------------
+# Python
+# -------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Packaging / build
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# -------------------------------------------------------------
+# Virtual environments & environment managers
+# -------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+.pdm.toml
+.pdm-python
+__pypackages__/
+.conda/
+conda-meta/
+# Uncomment if you don't want to commit lock files
+# poetry.lock
+# Pipfile.lock
+# uv.lock
+
+# -------------------------------------------------------------
+# Secrets & credentials (NEVER commit these)
+# -------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+credentials.json
+service-account*.json
+.secrets/
+config/local*.yaml
+config/secrets*.yaml
+# API tokens for weather / grid / smart-meter data providers
+*api_key*
+*.token
+
+# -------------------------------------------------------------
+# Data (raw, processed, external) — keep folder structure only
+# -------------------------------------------------------------
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+!data/**/README.md
+
+# Common data file formats
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.arrow
+*.h5
+*.hdf5
+*.hdf
+*.nc
+*.netcdf
+*.grib
+*.grib2
+*.zarr/
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+*.pkl.gz
+*.json.gz
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+# Allow small sample/test data if you need it
+!tests/data/**
+!data/sample/**
+
+# -------------------------------------------------------------
+# Models, checkpoints & artifacts
+# -------------------------------------------------------------
+models/*
+!models/.gitkeep
+!models/README.md
+*.pkl
+*.pickle
+*.joblib
+*.sav
+*.model
+*.h5model
+*.keras
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.pb
+*.tflite
+*.bin
+*.cbm
+*.lgb
+*.xgb
+*.ubj
+checkpoints/
+saved_models/
+artifacts/
+
+# -------------------------------------------------------------
+# Experiment tracking & hyperparameter tuning
+# -------------------------------------------------------------
+mlruns/
+mlartifacts/
+wandb/
+.neptune/
+lightning_logs/
+tb_logs/
+runs/
+logs/
+outputs/
+multirun/
+.hydra/
+optuna*.db
+ray_results/
+*.tfevents.*
+.aim/
+.clearml/
+comet_ml/
+.dvc/tmp/
+.dvc/cache/
+
+# -------------------------------------------------------------
+# Interpretability / reports outputs (SHAP, LIME, plots)
+# -------------------------------------------------------------
+reports/figures/*
+!reports/figures/.gitkeep
+shap_values/
+*.shap
+explanations/
+# Uncomment to ignore all generated images
+# *.png
+# *.jpg
+# *.svg
+# *.html
+
+# -------------------------------------------------------------
+# Jupyter / notebooks
+# -------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
+.jupyter/
+.virtual_documents/
+# Uncomment if you use jupytext and only want to commit .py versions
+# *.ipynb
+
+# -------------------------------------------------------------
+# Testing, coverage & type checking
+# -------------------------------------------------------------
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+nosetests.xml
+.cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+cython_debug/
+
+# -------------------------------------------------------------
+# Documentation builds
+# -------------------------------------------------------------
+docs/_build/
+docs/build/
+site/
+.quarto/
+_freeze/
+
+# -------------------------------------------------------------
+# R (in case of R-based analysis/time-series work)
+# -------------------------------------------------------------
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# -------------------------------------------------------------
+# Spark / big data / caches
+# -------------------------------------------------------------
+spark-warehouse/
+metastore_db/
+derby.log
+.dask-worker-space/
+dask-worker-space/
+joblib_cache/
+cachedir/
+*.tmp
+*.temp
+tmp/
+temp/
+
+# -------------------------------------------------------------
+# Docker / deployment
+# -------------------------------------------------------------
+.docker/
+docker-compose.override.yml
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# -------------------------------------------------------------
+# IDEs & editors
+# -------------------------------------------------------------
+.vscode/
+!.vscode/settings.json.example
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+.spyderproject
+.spyproject
+.ropeproject
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# -------------------------------------------------------------
+# OS-generated files
+# -------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# -------------------------------------------------------------
+# Logs
+# -------------------------------------------------------------
+*.log
+*.out
+*.err
+nohup.out
